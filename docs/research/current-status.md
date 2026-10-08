@@ -12,6 +12,14 @@ checkpoint and all earlier artifacts. See the
 [integration ledger](community-integration.md) and [community credits](../../CONTRIBUTORS.md).
 Do not treat a successful finite replay as verification of the full theorem.
 
+An **open, unintegrated candidate** is recorded in
+[research/ordered-chain](../../research/ordered-chain/README.md): reordering the
+h=23 producer's sum aggregation raises the recorded conditional exponent to
+`kappa=982718877/25000000000000=3.930875508e-5`, checked by
+`make ordered-chain-check`. It stays outside the accepted witness until the
+producer/matching and physical-timeline audits are rerun on the reordered
+circuit.
+
 The remainder is the historical checkpoint baseline; its uses of “latest”
 and “current” refer to that checkpoint, not the accepted integration witness.
 

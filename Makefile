@@ -5,7 +5,23 @@
 community-audit-check:
 	python3 scripts/audit_community_candidate.py --check docs/research/community-audit-arithmetic.json
 
-verify: community-audit-check
+.PHONY: kappa-headroom kappa-headroom-check
+kappa-headroom:
+	python3 scripts/kappa_headroom.py --output certificates/kappa-headroom.json
+
+kappa-headroom-check:
+	python3 scripts/kappa_headroom.py --check certificates/kappa-headroom.json
+
+.PHONY: ordered-chain ordered-chain-check
+ordered-chain:
+	python3 research/ordered-chain/measure.py
+	python3 research/ordered-chain/witness.py
+
+ordered-chain-check:
+	python3 research/ordered-chain/measure.py --check
+	python3 research/ordered-chain/witness.py --check
+
+verify: community-audit-check kappa-headroom-check ordered-chain-check
 	$(MAKE) copied-centers-verify
 	$(MAKE) structured-bulk-verify
 	$(MAKE) endpoint-gauge-producer endpoint-gauge-certificate

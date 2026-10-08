@@ -15,6 +15,12 @@ fixed-middle-basis contribution, building on the community work credited in
 [maintainer audit](community-final-audit.md) records acceptance and limits.
 The earlier checkpoints below remain preserved.
 
+An **open candidate** recorded in [research/ordered-chain](../../research/ordered-chain/README.md)
+reorders the h=23 producer's sum aggregation and, on the recorded row, raises the
+conditional exponent to `kappa=982718877/25000000000000 = 3.930875508e-5`
+(+1.137%). It is not part of the pinned release: the reordered producer row is
+recorded rather than rebuilt by the audited pipeline.
+
 ## Ternary checkpoint
 
 The [ternary construction](ternary-review.md) supplies conditional kappa=2^-30

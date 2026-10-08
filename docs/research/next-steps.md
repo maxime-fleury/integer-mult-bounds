@@ -1,5 +1,16 @@
 # Next research steps after the bounded investigation
 
+**First live lever, measured:** the [reordered-aggregation candidate](../../research/ordered-chain/README.md)
+lowers the h=23 producer's matched roles `38,776 -> 37,620` and raises the
+fixed-middle bit root by `+1.137%` by changing the sum aggregation from balanced
+halving to a sorted sequential chain (checked by `make ordered-chain-check`).
+
+**Quantified headroom:** the [exponent headroom](kappa-headroom.md) analysis
+brackets the pinned bit network's true contraction root and proves two
+ceilings (`kappa < 1/32` from the certified assembly, and `a* <= 0.009806`
+from the network's `(m, W, s)`), with the log-budget decomposition that ranks
+the available levers. Read it before choosing a target below.
+
 **Authoritative current status:** [compact-control follow-up](current-status.md).
 It supplies a local conditional `83/10^12 > 2^-34` witness. The next substantial
 target is the complex finite network; the split-central-gate experiment is a

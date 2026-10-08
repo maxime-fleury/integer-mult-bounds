@@ -91,6 +91,20 @@ and [review guide](docs/research/ternary-review.md). Earlier artifacts are
 historical witnesses, not descriptions of this release's construction.
 PR #40 and later work remain outside the pinned audit.
 
+### Open candidate, not part of this release
+
+A checked follow-up in [research/ordered-chain](research/ordered-chain/README.md)
+reorders the h=23 producer's sum aggregation (balanced halving to a single
+sequential chain sorted by support size), lowering the matched carrier roles
+`38,776 -> 37,620` and, on the recorded row, raising the conditional exponent to
+`kappa = 982718877/25000000000000 = 3.930875508e-5` (**+1.137%**), still
+`> 2^-15`. It is deliberately **not** wired into the headline above: the
+reordered producer row is recorded from a local prototype rather than rebuilt by
+the audited pipeline, so the producer/carrier-matching and physical-timeline
+audits of a full release are still open. Its finite arithmetic and the pinned
+tree are checked by `make ordered-chain-check`; the headroom analysis behind it
+is in [docs/research/kappa-headroom.md](docs/research/kappa-headroom.md).
+
 ## Reproduce
 
 Requires Python 3.11 or newer, Git, Make and a C++17 compiler with unsigned
@@ -108,6 +122,7 @@ For the final witness and the independent arithmetic/source audit:
 make copied-fixed-reversed-check
 make copied-fixed-reversed-producer
 make community-audit-check
+make ordered-chain-check
 ```
 
 Allow several minutes and multiple gigabytes of memory for full producer

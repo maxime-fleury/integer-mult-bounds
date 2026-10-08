@@ -1,0 +1,44 @@
+{
+  "artifact": "ordered-chain (h=23 reordered sum aggregation)",
+  "circuit": {
+    "aggregation": "sequential chain, sorted by (support cardinality, mask) desc",
+    "baseline_aggregation": "inherited balanced halving",
+    "point_order": "aligned (unchanged)"
+  },
+  "network": {
+    "L": 2226400,
+    "N": 4073300,
+    "W_baseline": 188181929,
+    "W_variant": 185523129,
+    "deficit": 1846900,
+    "deficit_over_W_baseline": "80300/8181823",
+    "deficit_over_W_variant": "7300/733293",
+    "m": 575
+  },
+  "producer": {
+    "baseline_R": 38776,
+    "baseline_c": 34764,
+    "baseline_matching": 1324,
+    "h": 23,
+    "loss": 506,
+    "q": 5336,
+    "v": 1771,
+    "variant_R": 37620,
+    "variant_c": 36328,
+    "variant_matching": 4044
+  },
+  "provenance": {
+    "axes_sha256": "ed307cef595091b11ba8f8e6ff11302ad8db190227a2fbf34c232fd680206254",
+    "producer_23_sha256": "b5e3516831d47c1f94f403e87f06d9a58f0c59d4ccb4c7382560951565656952",
+    "profile_sha256": "7a039013e11b2bf83029039cd499360183c0ac6906cf00b0385541c9ce830297"
+  },
+  "root": {
+    "baseline_lower": "683777823/17592186044416",
+    "baseline_upper": "1367555647/35184372088832",
+    "improvement_ratio": "1383108233/1367555647",
+    "scope": "fixed-middle (headline) family, h=25 row unchanged",
+    "variant_lower": "1383108233/35184372088832",
+    "variant_upper": "691554117/17592186044416"
+  },
+  "scope": "Exact finite arithmetic on a recorded alternative producer row. The reordering is a scalar-circuit change and would require the producer/matching and physical-timeline audits of a full release before any headline change; this file makes no such claim."
+}
